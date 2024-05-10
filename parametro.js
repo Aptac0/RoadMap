@@ -10,7 +10,7 @@ if (!carpetaNombre) {
     // Si 'nombre' no está presente, genera un número aleatorio
     carpetaNombre = generarCadenaAleatoria();
     // Agrega el parámetro 'nombre' a la URL
-    const urlConParametro = urlActual.includes("?") ? `${urlActual}&${carpetaNombre}` //: `${urlActual}${carpetaNombre}`;
+    const urlConParametro = urlActual.includes("?") ? `${urlActual}&nombre=${carpetaNombre}` : `${urlActual}?nombre=${carpetaNombre}`;
     // Redirige a la nueva URL con el parámetro 'nombre'
     window.location.href = urlConParametro;
 } else {
